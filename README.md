@@ -6,7 +6,7 @@
 
 ## Installing
 ```
-npm i ganiyem-util-noop
+npm i ganiyem-util-base64url
 ```
 
 ## License
