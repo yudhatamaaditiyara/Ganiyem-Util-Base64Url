@@ -15,50 +15,49 @@
  */
 'use strict';
 
-const Base64 = require("ganiyem-util-base64");
+const Base64 = require('ganiyem-util-base64');
 
 /**
  * @param {string} data
- * @returns {string}
+ * @return {string}
  */
 function pad(data){
-	return data + "=".repeat(4 - ((data.length % 4) || 4));
+	return data + '='.repeat(4 - ((data.length % 4) || 4));
 }
 
 /**
  * @param {string} data
- * @returns {string}
+ * @return {string}
  */
 function escape(data){
-	return data.replace(/\+/g,'-').replace(/\//g,'_').replace(/\=/g, '');
+	return data.replace(/\+/g, '-').replace(/\//g, '_').replace(/\=/g, '');
 }
 
 /**
  * @param {string} data
- * @returns {string}
+ * @return {string}
  */
 function unescape(data){
-	return pad(data).replace(/\-/g,'+').replace(/\_/g,'/');
+	return pad(data).replace(/\-/g, '+').replace(/\_/g, '/');
 }
 
 /**
  * @param {string|number} data
- * @param {string|void} encoding
- * @returns {string}
+ * @return {string}
  */
-function encode(data, encoding){
-	return escape(Base64.encode(data, encoding));
+function encode(data){
+	return escape(Base64.encode(data));
 }
 
 /**
  * @param {string} data
- * @param {string|void} encoding
- * @returns {string}
+ * @return {string}
  */
-function decode(data, encoding){
-	return Base64.decode(unescape(data), encoding);
+function decode(data){
+	return Base64.decode(unescape(data));
 }
 
 /**
+ * @+
  */
 module.exports = {pad, escape, unescape, encode, decode};
