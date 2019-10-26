@@ -11,4 +11,3 @@ npm i ganiyem-util-base64url
 
 ## License
 [Apache-2.0](https://github.com/yudhatamaaditiyara/Ganiyem-Util-Base64Url/blob/master/LICENSE)
-
