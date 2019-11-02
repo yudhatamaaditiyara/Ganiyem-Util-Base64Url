@@ -19,7 +19,7 @@ const Base64 = require('ganiyem-util-base64');
 
 /**
  * @param {string} data
- * @return {string}
+ * @returns {string}
  */
 function pad(data){
 	return data + '='.repeat(4 - ((data.length % 4) || 4));
@@ -27,7 +27,7 @@ function pad(data){
 
 /**
  * @param {string} data
- * @return {string}
+ * @returns {string}
  */
 function escape(data){
 	return data.replace(/\+/g, '-').replace(/\//g, '_').replace(/\=/g, '');
@@ -35,15 +35,15 @@ function escape(data){
 
 /**
  * @param {string} data
- * @return {string}
+ * @returns {string}
  */
 function unescape(data){
 	return pad(data).replace(/\-/g, '+').replace(/\_/g, '/');
 }
 
 /**
- * @param {string|number} data
- * @return {string}
+ * @param {(string|number)} data
+ * @returns {string}
  */
 function encode(data){
 	return escape(Base64.encode(data));
@@ -51,7 +51,7 @@ function encode(data){
 
 /**
  * @param {string} data
- * @return {string}
+ * @returns {string}
  */
 function decode(data){
 	return Base64.decode(unescape(data));
