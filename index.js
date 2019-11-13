@@ -22,7 +22,7 @@ const Base64 = require('ganiyem-util-base64');
  * @returns {string}
  */
 function pad(data){
-	return data + '='.repeat(4 - ((data.length % 4) || 4));
+  return data + '='.repeat(4 - ((data.length % 4) || 4));
 }
 
 /**
@@ -30,7 +30,7 @@ function pad(data){
  * @returns {string}
  */
 function escape(data){
-	return data.replace(/\+/g, '-').replace(/\//g, '_').replace(/\=/g, '');
+  return data.replace(/\+/g, '-').replace(/\//g, '_').replace(/\=/g, '');
 }
 
 /**
@@ -38,7 +38,7 @@ function escape(data){
  * @returns {string}
  */
 function unescape(data){
-	return pad(data).replace(/\-/g, '+').replace(/\_/g, '/');
+  return pad(data).replace(/\-/g, '+').replace(/\_/g, '/');
 }
 
 /**
@@ -46,7 +46,7 @@ function unescape(data){
  * @returns {string}
  */
 function encode(data){
-	return escape(Base64.encode(data));
+  return escape(Base64.encode(data));
 }
 
 /**
@@ -54,7 +54,7 @@ function encode(data){
  * @returns {string}
  */
 function decode(data){
-	return Base64.decode(unescape(data));
+  return Base64.decode(unescape(data));
 }
 
 /**
