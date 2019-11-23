@@ -1,3 +1,7 @@
+# 1.0.8 - 2019-11-23
+
+- docs: fix `CHANGELOG.md` message
+
 # 1.0.7 - 2019-11-22
 
 - build: upgrade deps `ganiyem-util-base64@1.0.7`
