@@ -13,7 +13,7 @@
 
 - build: upgrade deps `ganiyem-util-base64@1.0.5`
 - build: remove devDeps `mocha-lcov-reporter@1.3.0`
-- build: rename `package.scripts.coveralls` to `coverage`
+- build: rename `package.scripts.coveralls` to `package.scripts.coverage`
 - ci: rename `coveralls` to `coverage`
 
 # 1.0.4 - 2019-11-02
